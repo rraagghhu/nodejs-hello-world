@@ -1,13 +1,12 @@
 var http = require('http');
+var express = require('express');
 
-var server = http.createServer(function(request, response) {
+var app = express();
 
-    response.writeHead(200, {"Content-Type": "text/plain"});
-    response.end("Hello World!");
+app.get('/api/v0/suggest-reads/test', (req, res, next) => {
+	return res.json({message: 'ok'})
+})
 
-});
 
-var port = 80;
-server.listen(port);
-
-console.log("Server running at http://localhost:%d", port);
+var port = 8080;
+app.listen(port)
