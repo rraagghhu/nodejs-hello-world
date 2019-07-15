@@ -8,5 +8,5 @@ app.get('/api/v0/suggest-reads/test', (req, res, next) => {
 })
 
 
-var port = 8080;
+var port = 80;
 app.listen(port)
